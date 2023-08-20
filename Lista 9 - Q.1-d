@@ -1,0 +1,31 @@
+// Dados dois vetores x e y em um espaço de 20 dimensões, faça um programa que
+// calcule e mostre o produto escalar desses vetores.
+
+#include <stdio.h>
+#define X 20
+#define Y 20
+int main() {
+  int vetx[X], vety[Y], i, j, produto_escalar = 0;
+  for (i = 0; i < X; i++) {
+    printf("Digite o valor para o vetor X [%d]: ", i);
+      
+    if (scanf("%d", &vetx[i]) != 1) {
+      printf("\nERRO... Digite um numero.");
+      return 1;
+    }
+  }
+  printf("\n");
+  for (i = 0; i < Y; i++) {
+    printf("Digite o valor para o vetor Y [%d]: ", i);
+    if (scanf("%d", &vety[i]) != 1) {
+      printf("\nERRO... Digite um numero.");
+      return 1;
+    }
+  }
+  for (i = 0; i < X; i++) {
+    produto_escalar += vetx[i] * vety[i];
+  }
+  printf("\nO produto escalar é = %d", produto_escalar);
+
+  return 0;
+}
