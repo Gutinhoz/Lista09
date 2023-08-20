@@ -1,0 +1,35 @@
+/*Faça um programa que leia 15 números inteiros, armazene-os em um vetor,
+solicite um valor de referência inteiro e: • imprima os números do vetor que são
+maiores que o valor referência • retorne quantos números armazenados no vetor
+são menores que o valor de referência*/
+
+#include <stdio.h>
+#define TAM 15
+int main() {
+  int i, num_igual = 0, num, num_maior = 0, num_menor = 0, vet[TAM];
+
+  for (i = 0; i < TAM; i++) {
+    printf("\nDigite um numero inteiro para fazer parte do vetor: ");
+    scanf("%d", &vet[i]);
+  }
+  printf("\nDigite um numero como referencia para comparar com os numeros "
+         "anteriores digitados: ");
+  scanf("%d", &num);
+
+  for (i = 0; i < TAM; i++) {
+    if (vet[i] > num) {
+      printf("\n %d é maior que o valor de referência", vet[i]);
+      num_maior++;
+    }else if (num > vet[i]) {
+      num_menor++;
+      printf("\n %d é menor que o valor de referência", vet[i]);
+    } else {
+      num_igual++;
+      printf("\n %d é igual ao valor de referência", vet[i]);
+    }
+  }
+  printf("\n\nExistem %d numeros maiores que a referencia, %d menores e %d iguais.",
+         num_maior, num_menor,num_igual);
+
+  return 0;
+}
