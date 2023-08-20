@@ -1,0 +1,27 @@
+/*Faça um programa que leia 10 valores reais e os apresente na ordem inversa da
+ * entrada.*/
+
+#include <stdio.h>
+#define TAM 10
+int main() {
+  int i, j = 9;
+  float vet[TAM];
+
+  for (i = 0; i < TAM; i++) {
+    printf("\nDigite um valor para o vetor [%d] = ", i);
+
+    if (scanf("%f", &vet[i]) != 1) {
+      printf("\nDEU ERRO, digite um número real ");
+      return 1;
+    }
+  }
+
+  printf("\nOs valores na ordem inversa é");
+
+  for (i = 9; i >= 0; i--) {
+    printf("\nOs valores na ordem inversa são: Vetor[%d] = %2.f", j, vet[i]);
+    j--;
+  }
+
+  return 0;
+}
