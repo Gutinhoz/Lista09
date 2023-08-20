@@ -1,0 +1,24 @@
+#include <stdio.h>
+#define TAM 3
+int main() {
+  int vet[TAM], i, x, y, soma;
+  for (i = 0; i < TAM; i++) {
+    printf("Digite um número para o vetor [%d] =  ", i);
+    scanf("%d", &vet[i]);
+  }
+
+  printf("\nDigite o numero X da posição do vetor: ");
+  scanf("%d", &x);
+  printf("\nDigite um numero Y da posição do vetor: ");
+  scanf("%d", &y);
+if(x<0 || y<0){
+        printf("\nERRO, digite uma posicao para X ou Y maior que -1");
+}
+else{
+  printf("\nO numero da posição X é: %d", vet[x]);
+  printf("\nO numero da posição Y é: %d", vet[y]);
+  soma = vet[x] + vet[y];
+  printf("\nA soma dos numeros das posicoes é: %d", soma);
+}
+  return 0;
+}
