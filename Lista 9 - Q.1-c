@@ -8,6 +8,7 @@ são menores que o valor de referência*/
 int main() {
   int i, num_igual = 0, num, num_maior = 0, num_menor = 0, vet[TAM];
 
+
   for (i = 0; i < TAM; i++) {
     printf("\nDigite um numero inteiro para fazer parte do vetor: ");
     scanf("%d", &vet[i]);
@@ -22,10 +23,8 @@ int main() {
       num_maior++;
     }else if (num > vet[i]) {
       num_menor++;
-      printf("\n %d é menor que o valor de referência", vet[i]);
     } else {
-      num_igual++;
-      printf("\n %d é igual ao valor de referência", vet[i]);
+      num_igual++; 
     }
   }
   printf("\n\nExistem %d numeros maiores que a referencia, %d menores e %d iguais.",
